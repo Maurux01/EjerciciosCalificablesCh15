@@ -17,7 +17,14 @@
 // ============================================================
 
 function esPrecioValido(valor) {
-  // Tu código aquí
+  let esunNumero = typeof valor === 'number';
+  let noesNan = !Number.isNaN(valor);
+  let esMayoracero = valor > 0;
+  if (esunNumero && noesNan && esMayoracero) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // No borres esta línea: es la puerta por donde el test usa tu función
